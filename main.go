@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/l-brawler-l/go_test/tasks"
+	//"github.com/l-brawler-l/go_test/tasks/first_hw/juniour"
+	"github.com/l-brawler-l/go_test/tasks/first_hw/middle"
 )
 
 func main() {
-	fmt.Println(tasks.Hello())
+	fmt.Print(middle.TempConverter(0.0))
 }
