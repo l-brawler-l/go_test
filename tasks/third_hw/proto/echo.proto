@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package proto;
+
+
+option go_package = "github.com/l-brawler-l/go_test/tasks/third_hw/proto";
+
+
+service BankAccounts {
+  rpc Create (CreateAccountRequest) returns (Empty) {}
+  rpc Get (GetAccountRequest) returns (GetAccountReply) {}
+  rpc Patch (PatchAccountRequest) returns (Empty) {}
+  rpc Delete (DeleteAccountRequest) returns (Empty) {}
+  rpc Change (ChangeAccountRequest) returns (Empty) {}
+}
+
+message CreateAccountRequest {
+  string name = 1;
+  int32 amount = 2;
+}
+
+message GetAccountRequest {
+  string name = 1;
+}
+
+message PatchAccountRequest {
+  string name = 1;
+  int32 amount = 2;
+}
+
+message DeleteAccountRequest {
+  string name = 1;
+}
+
+message ChangeAccountRequest {
+  string name = 1;
+  string new_name = 2;
+}
+
+
+message GetAccountReply {
+  string name = 1;
+  int32 amount = 2;
+}
+
+message Empty {
+  
+}

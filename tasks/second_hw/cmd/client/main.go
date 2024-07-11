@@ -233,6 +233,7 @@ func main() {
 	hostVal := flag.String("host", "0.0.0.0", "server host")
 	cmdVal := flag.String("cmd", "", "command to execute")
 	nameVal := flag.String("name", "", "name of account")
+	newnameVal := flag.String("newname", "", "new name of account")
 	amountVal := flag.Int("amount", 0, "amount of account")
 
 	flag.Parse()
@@ -242,6 +243,7 @@ func main() {
 		Host:   *hostVal,
 		Cmd:    *cmdVal,
 		Name:   *nameVal,
+		NewName: *newnameVal,
 		Amount: *amountVal,
 	}
 
